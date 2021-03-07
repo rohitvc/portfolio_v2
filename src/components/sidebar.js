@@ -1,5 +1,5 @@
 import React from "react"
-import './sidebar.css';
+import "./sidebar.css"
 
 const Sidebar = ({}) => {
   return (
@@ -20,10 +20,13 @@ const Sidebar = ({}) => {
             About
           </li>
           <li className="sidebar-menu-item inline-block transform -rotate-90 origin-center text-center hover:text-red-500 cursor-pointer">
-            Experience
+            Expertise
           </li>
           <li className="sidebar-menu-item inline-block transform -rotate-90 origin-center text-center hover:text-red-500 cursor-pointer">
-            Works
+            Work
+          </li>
+          <li className="sidebar-menu-item inline-block transform -rotate-90 origin-center text-center hover:text-red-500 cursor-pointer">
+            Blog
           </li>
           <li className="sidebar-menu-item inline-block transform -rotate-90 origin-center text-center hover:text-red-500 cursor-pointer">
             Contact

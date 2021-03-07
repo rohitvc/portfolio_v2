@@ -1,0 +1,10 @@
+.experience-content::after, .education-content::after {
+    position: absolute;
+    content: "";
+    left: -7px;
+    top: 6px;
+    width: 13px;
+    height: 13px;
+    background-color: #f21e4e;
+    border-radius: 50%;
+}

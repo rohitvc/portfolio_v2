@@ -4,11 +4,23 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 // import SEO from "../components/seo"
-import Homepage from '../components/homepage'
+import Homepage from "../components/homepage"
+import About from "../components/about"
+import Experience from '../components/experience'
+import Skills from '../components/skills'
+import Work from '../components/work'
 
 const IndexPage = () => (
   <Layout>
-    <Homepage></Homepage>
+    <div className="relative">
+      <div className="h-screen overflow-y-auto">
+        <Homepage></Homepage>
+        <About></About>
+        <Experience></Experience>
+        <Skills></Skills>
+        <Work></Work>
+      </div>
+    </div>
   </Layout>
 )
 
