@@ -7,8 +7,8 @@ const Sidebar = ({}) => {
       <nav className="h-full">
         <ul className="min-h-35 max-h-90 flex flex-col justify-between">
           <li className="flex justify-center mt-4">
-            <div className="rounded-full flex items-center justify-center items-center h-16 w-16 bg-red-600">
-              <h5 className="text-white text-xl hover:text-gray-800 cursor-pointer">
+            <div className="rounded-full flex items-center justify-center items-center h-10 sm:h-16 w-10 sm:w-16 bg-red-600">
+              <h5 className="text-white text-base sm:text-xl hover:text-gray-800 cursor-pointer">
                 RC
               </h5>
             </div>

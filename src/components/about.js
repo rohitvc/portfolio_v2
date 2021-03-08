@@ -5,8 +5,8 @@ import { StaticImage } from "gatsby-plugin-image"
 const About = ({}) => {
   return (
     <div className="min-h-35">
-      <section className="px-10 lg:px-40 grid grid-cols-1 grid-rows-4">
-        <div className="my-10 flex flex-wrap flex-col about-title row-span-1">
+      <section className="px-5 sm:px-10 lg:px-40 grid grid-cols-1 grid-rows-4">
+        <div className="my-10 flex flex-wrap flex-col head-title row-span-1">
           <h2 className="text-4xl font-bold">About me</h2>
           <p className="text-base text-gray-600">
             Get to know more about me and what i do
@@ -15,7 +15,7 @@ const About = ({}) => {
         <div className="row mb-10 row-span-3">
           <div className="grid grid-cols-12">
             <div className="col-span-12 md:col-span-7">
-              <StaticImage src="../images/github.png" alt="A dinosaur" />
+              <StaticImage src="../images/github.png" alt="github" />
             </div>
             <div className="col-span-12 md:col-span-5">
                 <div className="flex flex-col justify-center h-full">

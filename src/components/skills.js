@@ -5,15 +5,15 @@ import "./skills.css"
 const Skills = ({}) => {
   return (
     <div className="min-h-35">
-      <section className="px-10 lg:px-40 grid grid-cols-1">
+      <section className="px-5 sm:px-10 lg:px-40 grid grid-cols-1">
         <div className="col-span-1">
-          <div className="my-10 flex flex-wrap flex-col about-title row-span-1">
+          <div className="my-10 flex flex-wrap flex-col head-title row-span-1">
             <h2 className="text-4xl font-bold">My Expertise</h2>
             <p className="text-base text-gray-600">
               Things that i am better at in web development.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="px-5 py-5 bg-white rounded shadow-md">
               <div className="border text-center rounded-full w-20 h-20 border-red-500 m-auto">
                 <h2 className="font-extrabold text-3xl text-red-500 border-red-500 h-full flex justify-center items-center">
@@ -181,6 +181,13 @@ const Skills = ({}) => {
                 className="h-full"
                 alt="yarn"
                 src="https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white"
+              ></img>
+            </div>
+            <div className="rounded h-8 mx-2 my-2">
+              <img
+                className="h-full"
+                alt="npm"
+                src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"
               ></img>
             </div>
             <div className="rounded h-8 mx-2 my-2">

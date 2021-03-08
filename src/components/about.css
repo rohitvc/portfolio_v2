@@ -1,9 +1,9 @@
-.about-title {
+.head-title {
     position: relative;
     padding-left: 1rem;
 }
 
-.about-title::after {
+.head-title::after {
     position: absolute;
     content: "";
     left: 0px;

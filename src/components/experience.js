@@ -5,7 +5,7 @@ import "./experience.css"
 const Experience = ({}) => {
   return (
     <div className="min-h-35">
-      <section className="px-10 lg:px-40 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <section className="px-5 sm:px-10 lg:px-40 grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="col-span-2 md:col-span-1">
           <h3 className="text-xl font-bold mb-5">My Experience</h3>
           <div className="p-5 mb-5 bg-white rounded shadow-md">
