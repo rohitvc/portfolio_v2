@@ -2,9 +2,9 @@ import React from "react"
 import "./contact.css"
 // import { StaticImage } from "gatsby-plugin-image"
 
-const Contact = ({}) => {
+const Contact = () => {
   return (
-    <div className="min-h-35">
+    <div id="contact" className="min-h-35 scroll-target">
       <section className="sm:px-10 lg:px-40 grid grid-cols-1">
         <div className="col-span-1">
           <div className="my-10 flex flex-wrap flex-col head-title row-span-1">
@@ -79,11 +79,18 @@ const Contact = ({}) => {
             </p>
             <div className="flex flex-col mb-4">
               <p className="font-bold">Phone: </p>
-              <p className="font-light">+91 (7738845950)</p>
+              <p className="font-light text-red-500 hover:text-red-700">+91 (7738845950)</p>
             </div>
             <div className="flex flex-col">
               <p className="font-bold">Email: </p>
-              <p><a className="font-light text-red-500 hover:text-red-700" href="mailto:rohitchavan@yahoo.com">rohitchavan@yahoo.com</a></p>
+              <p>
+                <a
+                  className="font-light text-red-500 hover:text-red-700"
+                  href="mailto:rohitchavan@yahoo.com"
+                >
+                  rohitchavan@yahoo.com
+                </a>
+              </p>
             </div>
           </div>
         </div>

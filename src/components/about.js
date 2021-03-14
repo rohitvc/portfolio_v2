@@ -2,9 +2,9 @@ import React from "react"
 import "./about.css"
 import { StaticImage } from "gatsby-plugin-image"
 
-const About = ({}) => {
+const About = () => {
   return (
-    <div className="min-h-35">
+    <div id="about" className="min-h-35 scroll-target">
       <section className="px-5 sm:px-10 lg:px-40 grid grid-cols-1 grid-rows-4">
         <div className="my-10 flex flex-wrap flex-col head-title row-span-1">
           <h2 className="text-4xl font-bold">About me</h2>
@@ -18,11 +18,26 @@ const About = ({}) => {
               <StaticImage src="../images/github.png" alt="github" />
             </div>
             <div className="col-span-12 md:col-span-5">
-                <div className="flex flex-col justify-center h-full">
-                    <h2 className="pb-5 text-lg font-bold">Hello, I'm Rohit Chavan</h2>
-                    <p className="pb-5 text-lg font-light">A Web developer based in Mumbai, India. I specialise in creating interactive experiences and functional interfaces on the web. I Spend most of my time learning new skills to improve and explore new technologies that keeps coming now and then.</p>
-                    <a className="p-2 w-max inline-flex bg-red-500 hover:bg-red-700 text-white rounded" href="#download">Download My CV</a>
-                </div>
+              <div className="flex flex-col justify-center h-full">
+                <h2 className="pb-5 text-lg font-bold">
+                  Hello, I'm Rohit Chavan
+                </h2>
+                <p className="pb-5 text-lg font-light">
+                  A Web developer based in Mumbai, India. I specialise in
+                  creating interactive experiences and functional interfaces on
+                  the web. I Spend most of my time learning new skills to
+                  improve and explore new technologies that keeps coming now and
+                  then.
+                </p>
+                <a
+                  className="p-2 w-max inline-flex bg-red-500 hover:bg-red-700 text-white rounded"
+                  href="https://drive.google.com/file/d/16SVnPcmaokZbZAcHmF2rMHgw6Q5veGGE/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Download My CV
+                </a>
+              </div>
             </div>
           </div>
         </div>

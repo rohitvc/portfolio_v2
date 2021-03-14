@@ -1,10 +1,11 @@
 import React from "react"
 import "./blogs.css"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
-const Blogs = ({}) => {
+const Blogs = () => {
   return (
-    <div className="min-h-35">
+    <div id="blog" className="min-h-35 scroll-target">
       <section className="px-5 sm:px-10 lg:px-40 grid grid-cols-1">
         <div className="col-span-1">
           <div className="my-10 flex flex-wrap flex-col head-title row-span-1">
@@ -32,12 +33,12 @@ const Blogs = ({}) => {
                   condimentum, leo a ornare pellentesque, massa nibh lobortis
                   ligula, eget lobortis ex mi nec justo..
                 </p>
-                <a
+                <Link
                   className="bg-red-500 hover:bg-red-700 text-white px-6 py-3 mt-3 self-start rounded-sm"
-                  href="#"
+                  to="/#"
                 >
                   Read More
-                </a>
+                </Link>
               </div>
             </div>
             <div className="px-5 py-5 bg-white rounded shadow-md">
@@ -58,12 +59,12 @@ const Blogs = ({}) => {
                   condimentum, leo a ornare pellentesque, massa nibh lobortis
                   ligula, eget lobortis ex mi nec justo..
                 </p>
-                <a
+                <Link
                   className="bg-red-500 hover:bg-red-700 text-white px-6 py-3 mt-3 self-start rounded-sm"
-                  href="#"
+                  to="/#"
                 >
                   Read More
-                </a>
+                </Link>
               </div>
             </div>
             <div className="px-5 py-5 bg-white rounded shadow-md">
@@ -84,12 +85,12 @@ const Blogs = ({}) => {
                   condimentum, leo a ornare pellentesque, massa nibh lobortis
                   ligula, eget lobortis ex mi nec justo..
                 </p>
-                <a
+                <Link
                   className="bg-red-500 hover:bg-red-700 text-white px-6 py-3 mt-3 self-start rounded-sm"
-                  href="#"
+                  to="/#"
                 >
                   Read More
-                </a>
+                </Link>
               </div>
             </div>
             <div className="px-5 py-5 bg-white rounded shadow-md">
@@ -110,12 +111,12 @@ const Blogs = ({}) => {
                   condimentum, leo a ornare pellentesque, massa nibh lobortis
                   ligula, eget lobortis ex mi nec justo..
                 </p>
-                <a
+                <Link
                   className="bg-red-500 hover:bg-red-700 text-white px-6 py-3 mt-3 self-start rounded-sm"
-                  href="#"
+                  to="/#"
                 >
                   Read More
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -6,17 +6,17 @@ import Layout from "../components/layout"
 // import SEO from "../components/seo"
 import Homepage from "../components/homepage"
 import About from "../components/about"
-import Experience from '../components/experience'
-import Skills from '../components/skills'
-import Work from '../components/work'
-import Blogs from '../components/blogs'
-import Contact from '../components/contact'
-import Footer from '../components/footer'
+import Experience from "../components/experience"
+import Skills from "../components/skills"
+import Work from "../components/work"
+import Blogs from "../components/blogs"
+import Contact from "../components/contact"
+import Footer from "../components/footer"
 
 const IndexPage = () => (
   <Layout>
     <div className="relative">
-      <div className="h-screen overflow-y-auto">
+      <div className="h-screen overflow-y-auto main-scroll-div">
         <Homepage></Homepage>
         <About></About>
         <Experience></Experience>

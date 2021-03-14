@@ -1,20 +1,19 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {
-    },
+    extend: {},
     maxHeight: {
-      '90': '90%',
-      '4/6': '66vh',
+      90: "90%",
+      "4/6": "66vh",
     },
     minHeight: {
-      '35': '35rem',
-    }
+      35: "35rem",
+    },
   },
   variants: {
     extend: {
-      fill: ['hover', 'focus'],
+      fill: ["hover", "focus"],
     },
   },
   plugins: [],

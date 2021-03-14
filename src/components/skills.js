@@ -2,9 +2,9 @@ import React from "react"
 import "./skills.css"
 // import { StaticImage } from "gatsby-plugin-image"
 
-const Skills = ({}) => {
+const Skills = () => {
   return (
-    <div className="min-h-35">
+    <div id="expertise" className="min-h-35 scroll-target">
       <section className="px-5 sm:px-10 lg:px-40 grid grid-cols-1">
         <div className="col-span-1">
           <div className="my-10 flex flex-wrap flex-col head-title row-span-1">

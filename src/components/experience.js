@@ -2,7 +2,7 @@ import React from "react"
 import "./experience.css"
 // import { StaticImage } from "gatsby-plugin-image"
 
-const Experience = ({}) => {
+const Experience = () => {
   return (
     <div className="min-h-35">
       <section className="px-5 sm:px-10 lg:px-40 grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -2,9 +2,12 @@ import React from "react"
 import SocialIcons from "./social"
 import "./homepage.css"
 
-const Homepage = ({}) => {
+const Homepage = () => {
   return (
-    <div className="grid grid-cols-12 grid-rows-2 md:grid-rows-none min-h-35 max-h-4/6">
+    <div
+      id="home"
+      className="grid grid-cols-12 grid-rows-2 md:grid-rows-none min-h-35 max-h-4/6 scroll-target"
+    >
       <section className="bg-gray-100 grid grid-rows-3 col-span-12 md:col-span-6">
         <SocialIcons></SocialIcons>
         <div className="hero-text flex flex-col ml-10">
