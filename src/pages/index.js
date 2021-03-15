@@ -15,8 +15,8 @@ import Footer from "../components/footer"
 
 const IndexPage = () => (
   <Layout>
-    <div className="relative">
-      <div className="h-screen overflow-y-auto main-scroll-div">
+    <div className="relative ml-16 sm:ml-24">
+      <div className="main-scroll-div">
         <Homepage></Homepage>
         <About></About>
         <Experience></Experience>

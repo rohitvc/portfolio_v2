@@ -1,11 +1,28 @@
-.sidebar-menu-item:hover::before, .sidebar-menu-item.active::before {
-    transform: translateX(-50%);
-    border-radius: 100%;
-    position: absolute;
-    background: #DC2626;
-    bottom: -10px;
-    height: 8px;
-    content: '';
-    width: 8px;
-    left: 50%;
+.sidebar-menu-item:hover::before,
+.sidebar-menu-item.active::before {
+  transform: translateX(-50%);
+  border-radius: 100%;
+  position: absolute;
+  background: #DC2626;
+  bottom: -10px;
+  height: 8px;
+  content: '';
+  width: 8px;
+  left: 50%;
+}
+
+.sidebar-nav {
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  width: 4rem;
+  z-index: 9999;
+  background: #fff;
+}
+
+@screen sm {
+  .sidebar-nav {
+    width: 6rem
   }
+}

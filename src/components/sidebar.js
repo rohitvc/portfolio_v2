@@ -8,10 +8,10 @@ const Sidebar = () => {
   const [activeLink, setActiveLink] = useState("home")
 
   useEffect(() => {
-    const scrollDiv = document.querySelector(".main-scroll-div")
+    const scrollParent = window
     const throttleScroll = throttle(scroller, 300)
-    scrollDiv.addEventListener("scroll", throttleScroll)
-    return () => scrollDiv.removeEventListener("scroll", throttleScroll)
+    scrollParent.addEventListener("scroll", throttleScroll)
+    return () => scrollParent.removeEventListener("scroll", throttleScroll)
   }, [])
 
   const anchorClicked = hash => {
@@ -20,12 +20,12 @@ const Sidebar = () => {
   }
 
   const scroller = () => {
-    const scrollDiv = document.querySelector(".main-scroll-div")
+    const scrollHeight = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
 
     document.querySelectorAll(".scroll-target").forEach(function (node) {
       if (
-        scrollDiv.scrollTop + 300 >= node.offsetTop &&
-        scrollDiv.scrollTop + 300 <= node.offsetTop + node.offsetHeight
+        scrollHeight + 200 >= node.offsetTop &&
+        scrollHeight + 200 <= node.offsetTop + node.offsetHeight
       ) {
         const id = node.getAttribute("id")
         setActiveLink(id)
@@ -34,7 +34,7 @@ const Sidebar = () => {
   }
 
   return (
-    <div className="h-screen">
+    <div className="h-screen sidebar-nav">
       <nav className="min-h-35 max-h-90 flex flex-col justify-between">
         <div className="rounded-full flex items-center justify-center items-center mx-auto mt-2 h-10 sm:h-16 w-10 sm:w-16 bg-red-600">
           <h5 className="text-white text-base sm:text-xl hover:text-gray-800 cursor-pointer">
