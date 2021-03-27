@@ -9,7 +9,6 @@ const query = graphql`
       nodes {
         slug
         title
-        content
         description
         date(formatString: "MMMM Do ,YYYY")
         id

@@ -3,7 +3,7 @@ import "./contact.css"
 import { useForm } from "@formspree/react"
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm("mknpdpwg")
+  const [state, handleSubmit] = useForm("xknkwkve")
 
   return (
     <div id="contact" className="min-h-35 scroll-target">
