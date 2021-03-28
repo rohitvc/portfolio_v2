@@ -5,7 +5,7 @@ module.exports = {
     author: `@rohitvc`,
     siteUrl: `https://rohitchavan.netlify.app`,
     twitterUsername: "@rohit_chavan1",
-    image: "/twitter-card.jpg"
+    image: "/twitter-card.png"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
