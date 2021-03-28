@@ -19,6 +19,9 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            siteUrl
+            image
+            twitterUsername
           }
         }
       }
@@ -27,6 +30,7 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const cardImage = `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`
 
   return (
     <Helmet
@@ -53,12 +57,28 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: site.siteMetadata.siteUrl || ``,
+        },
+        {
+          property: `og:image`,
+          content: cardImage || ``,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: site.siteMetadata?.twitterUsername || ``,
+        },
+        {
+          name: `twitter:url`,
+          content: site.siteMetadata.siteUrl || ``,
+        },
+        {
+          name: `twitter:image`,
+          content: cardImage || ``,
         },
         {
           name: `twitter:title`,
@@ -84,6 +104,9 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  siteUrl: PropTypes.string,
+  image: PropTypes.string,
+  twitterUsername: PropTypes.string
 }
 
 export default SEO

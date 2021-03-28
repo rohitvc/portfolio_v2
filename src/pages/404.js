@@ -3,9 +3,11 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
+import SEO from '../components/seo'
 
 const NotFoundPage = () => (
   <Layout>
+    <SEO title="404 Not Found" description="This is a dead end. Page not found" />
     <main className="error-page">
       <div className="relative ml-16 sm:ml-24 h-screen grid grid-cols-1 lg:grid-cols-2">
         <div className="flex flex-col z-10 text-white lg:text-black p-2 top-1/3 absolute lg:relative">

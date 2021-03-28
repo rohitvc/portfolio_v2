@@ -1,9 +1,7 @@
 import * as React from "react"
-// import { Link } from "gatsby"
-// import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
-// import SEO from "../components/seo"
+import SEO from "../components/seo"
 import Homepage from "../components/homepage"
 import About from "../components/about"
 import Experience from "../components/experience"
@@ -15,6 +13,7 @@ import Footer from "../components/footer"
 
 const IndexPage = () => (
   <Layout>
+    <SEO title={"Home"} />
     <div className="relative ml-16 sm:ml-24">
       <div className="main-scroll-div">
         <Homepage></Homepage>
