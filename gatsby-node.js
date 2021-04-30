@@ -1,4 +1,29 @@
 const path = require(`path`)
+const crypto = require(`crypto`)
+
+exports.onCreateNode =  async ({ node, actions, createNodeId }) => {
+  if (node.internal.type === "StrapiBlogs") {
+      const newNode = {
+          id: createNodeId(`StrapiBlogContent-${node.id}`),
+          parent: node.id,
+          children: [],
+          internal: {
+              content: node.content || " ",
+              type: "StrapiBlogContent",
+              mediaType: "text/markdown",
+              contentDigest: crypto
+                  .createHash("md5")
+                  .update(node.content || " ")
+                  .digest("hex"),
+          },
+      };
+      actions.createNode(newNode);
+      actions.createParentChildLink({
+          parent: node,
+          child: newNode,
+      });
+    }
+  }
 
 // Create blog pages dynamically
 exports.createPages = async ({ graphql, actions }) => {
