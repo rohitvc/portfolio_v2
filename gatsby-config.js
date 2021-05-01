@@ -5,7 +5,7 @@ module.exports = {
     author: `@rohitvc`,
     siteUrl: `https://rohitchavan.netlify.app`,
     twitterUsername: "@rohit_chavan1",
-    image: "/twitter-card.png"
+    image: "/twitter-card.png",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,6 +15,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blogs`,
+        path: `${__dirname}/src/blogs`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -27,7 +34,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 1190,
             },
           },
         ],
@@ -51,8 +58,8 @@ module.exports = {
       resolve: "gatsby-plugin-anchor-links",
       options: {
         offset: -100,
-        duration: 100
-      }
+        duration: 100,
+      },
     },
     {
       resolve: `gatsby-source-strapi`,
@@ -64,7 +71,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-mdx`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

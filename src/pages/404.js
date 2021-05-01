@@ -9,7 +9,7 @@ const NotFoundPage = () => (
   <Layout>
     <SEO title="404 Not Found" description="This is a dead end. Page not found" />
     <main className="error-page">
-      <div className="relative ml-16 sm:ml-24 h-screen grid grid-cols-1 lg:grid-cols-2">
+      <div className="relative ml-16 sm:ml-24 h-screen grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
         <div className="flex flex-col z-10 text-white lg:text-black p-2 top-1/3 absolute lg:relative">
           <h1 className="text-6xl font-light">Oops!! I think you have lost your way.</h1>
           <div className="mt-6 p-2">

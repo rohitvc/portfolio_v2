@@ -1,22 +1,24 @@
 import React from "react"
-import "./blogs.css"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import BlogCard from "./blogCard"
 
 const query = graphql`
   {
-    allStrapiBlogs(sort: { fields: date, order: DESC }, limit: 3) {
+    allMdx(limit: 3, sort: { fields: frontmatter___date }) {
       nodes {
-        slug
-        title
-        description
-        date(formatString: "MMMM Do ,YYYY")
         id
-        image {
-          childImageSharp {
-            gatsbyImageData
+        frontmatter {
+          author
+          date(formatString: "MMMM Do, YYYY")
+          slug
+          title
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
           }
         }
+        excerpt
       }
     }
   }
@@ -25,8 +27,9 @@ const query = graphql`
 const Blogs = () => {
   const data = useStaticQuery(query)
   const {
-    allStrapiBlogs: { nodes: blogs },
+    allMdx: { nodes: blogs },
   } = data
+
   return (
     <div id="blog" className="min-h-35 scroll-target">
       <section className="px-5 sm:px-10 lg:px-40 grid grid-cols-1">
@@ -39,30 +42,7 @@ const Blogs = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {blogs.map(blog => (
-              <div key={blog.id} className="px-5 py-5 bg-white rounded shadow-md">
-                <div className="image">
-                  <GatsbyImage
-                    className="max-w-full"
-                    image={blog.image.childImageSharp.gatsbyImageData}
-                    alt={blog.title}
-                  />
-                </div>
-                <div className="blog-content relative flex items-center flex-col justify-between py-2">
-                  <small className="text-gray-600 font-bold">{blog.date}</small>
-                  <h5 className="font-bold text-lg text-red-500 mt-2">
-                    {blog.title}
-                  </h5>
-                  <p className="text-base">
-                    {blog.description}
-                  </p>
-                  <Link
-                    className="bg-red-500 hover:bg-red-700 text-white px-6 py-3 mt-3 self-start rounded-sm"
-                    to={`/blogs/${blog.slug}`}
-                  >
-                    Read More
-                  </Link>
-                </div>
-              </div>
+              <BlogCard blog={blog} key={blog.id} />
             ))}
           </div>
         </div>

@@ -5,10 +5,13 @@ import SEO from "../components/seo"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 function BlogTemplate({ data }) {
-  const { title, childStrapiBlogContent } = data.blog
   const {
-    childMdx: { body, excerpt, timeToRead },
-  } = childStrapiBlogContent
+    mdx: {
+      frontmatter: { title },
+      body,
+      excerpt
+    },
+  } = data
   return (
     <Layout>
       <SEO title={title} description={excerpt} />
@@ -26,16 +29,21 @@ function BlogTemplate({ data }) {
 }
 
 export const query = graphql`
-  query GetSingleBlog($slug: String) {
-    blog: strapiBlogs(slug: { eq: $slug }) {
-      title
-      childStrapiBlogContent {
-        childMdx {
-          body
-          excerpt
-          timeToRead
+  query GetSinglePost($slug: String) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        category
+        date(formatString: "MMMM Do, YYYY")
+        author
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
       }
+      body
+      excerpt
     }
   }
 `
